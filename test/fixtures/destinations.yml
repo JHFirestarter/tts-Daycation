@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  description: MyText
+  characteristics: MyText
+  travel_cost: 1
+  travel_time: 1
+  distance: 1
+  dest_cost: 1
+  location: 1
+  image: MyString
+
+two:
+  name: MyString
+  type: 
+  description: MyText
+  characteristics: MyText
+  travel_cost: 1
+  travel_time: 1
+  distance: 1
+  dest_cost: 1
+  location: 1
+  image: MyString
