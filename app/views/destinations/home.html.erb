@@ -1,1 +1,11 @@
-<h1>Daycation!</h1>
+<div class="jumbotron">
+	<h1>Where do you want to go today?</h1>
+	<div class="container-fluid">
+		<div class="col-xs-2 col-sm-3">
+			<%= bootstrap_form_tag do |f| %>
+			  <%= f.text_field :origin, hide_label: true, placeholder: "Starting Address or City, State" %>
+			  <%= link_to "Random", @destinations_path, class: "btn btn-primary btn-lg btn-block"  %>
+			<% end %>
+		</div>	
+	</div>
+</div>
