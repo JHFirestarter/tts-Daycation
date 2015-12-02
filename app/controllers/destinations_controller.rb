@@ -3,6 +3,12 @@ class DestinationsController < ApplicationController
 
   # GET /destinations
   # GET /destinations.json
+
+  def home
+    @destinations = Destination.all
+  # how can we use randomization? e.g. Destination.offset(rand(Destination.count)).first
+  end
+
   def index
     @destinations = Destination.all
   end
@@ -69,6 +75,6 @@ class DestinationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def destination_params
-      params.require(:destination).permit(:name, :type, :description, :characteristics, :travel_cost, :travel_time, :distance, :dest_cost, :location, :image)
+      params.require(:destination).permit(:name, :type, :description, :characteristics, :travel_cost, :travel_time, :distance, :dest_cost, :location, :image, :origin)
     end
 end
