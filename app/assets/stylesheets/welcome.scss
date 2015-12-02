@@ -1,3 +1,9 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+ 	background-image: url("http://cameralabs.org/media/cameralabs/images/Tanya/_II_October/22.10/11iceland-waterfall.jpg");
+ 	background-size: cover;
+ 	background-repeat: no-repeat;
+}
+
+.jumbotron {
+	opacity: 0.8;
+}
