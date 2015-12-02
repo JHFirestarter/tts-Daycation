@@ -3,7 +3,7 @@
 	<div class="container-fluid">
 		<div class="col-xs-2 col-sm-3">
 			<%= bootstrap_form_tag do |f| %>
-			  <%= f.text_field :origin, hide_label: true, placeholder: "Your ZIP Code" %>
+			  <%= f.text_field :origin, hide_label: true, placeholder: "Starting Address or City, State" %>
 			  <%= link_to "Random", @destinations_path, class: "btn btn-primary btn-lg btn-block"  %>
 			<% end %>
 		</div>	
