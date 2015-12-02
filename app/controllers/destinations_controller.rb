@@ -4,11 +4,6 @@ class DestinationsController < ApplicationController
   # GET /destinations
   # GET /destinations.json
 
-  def home
-    @destinations = Destination.all
-  # how can we use randomization? e.g. Destination.offset(rand(Destination.count)).first
-  end
-
   def index
     @destinations = Destination.all
   end
