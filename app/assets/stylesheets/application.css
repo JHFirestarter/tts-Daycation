@@ -10,14 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *= require rails_bootstrap_forms
- *= require_tree .
  *= require_self
+ *= require main
  */
 
-body {
- 	background-image: url("http://cameralabs.org/media/cameralabs/images/Tanya/_II_October/22.10/11iceland-waterfall.jpg");
- 	background-size: cover;
- 	background-repeat: no-repeat; 
-}
 
-.jumbotron

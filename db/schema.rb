@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202152256) do
+ActiveRecord::Schema.define(version: 20151202201903) do
 
   create_table "destinations", force: :cascade do |t|
     t.string   "name"
-    t.string   "type"
     t.text     "description"
     t.text     "characteristics"
     t.integer  "travel_cost"
@@ -29,6 +28,7 @@ ActiveRecord::Schema.define(version: 20151202152256) do
     t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "dest_type"
   end
 
 end
