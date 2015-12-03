@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-  	@destinations = Destination.all
-  	# how can we use randomization? e.g. Destination.offset(rand(Destination.count)).first - also gem called 'randumb'
+  	@all_id = Destination.pluck(:id)
+  	@randest_id = @all_id.sample
   end
 end
