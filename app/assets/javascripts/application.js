@@ -15,9 +15,7 @@
 //= require_tree .
 
 // jQuery for welcome/index.html.erb to execute onclick instead of onload
-// $(document).ready(function() {
-//   $('#rand-dest').click(function(event){
-//     alert('Hooray!');
-//     event.preventDefault(); // Prevent link from following its href
-//   });
-// });
+	// $('#rand-dest').click(function(event){
+	// alert('Hooray!');
+	// event.preventDefault(); // Prevent link from following its href
+	// });
