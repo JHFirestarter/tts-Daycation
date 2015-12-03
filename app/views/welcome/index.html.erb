@@ -3,9 +3,11 @@
 	<div class="container-fluid">
 		<div class="col-xs-2 col-sm-3">
 			<%= bootstrap_form_tag do |f| %>
-			  <%= f.text_field :address, hide_label: true, placeholder: "Starting Address or City, State" %>
+			  <%= f.text_field :address, hide_label: true, placeholder: "Charlotte, NC (starting address)" %>
 			  <%= link_to "Random", "/destinations/#{@randest_id}", class: "btn btn-primary btn-lg btn-block"  %>
 			<% end %>
 		</div>	
 	</div>
 </div>
+
+<!-- add link to destinations page -->
