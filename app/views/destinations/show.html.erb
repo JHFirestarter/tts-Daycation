@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Destination Type:</strong>
-  <%= @destination.dest_type %>
+  <strong>Image:</strong>
+  <%= @destination.image %>
 </p>
 
 <p>
@@ -30,10 +30,14 @@
   <%= @destination.dest_cost %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @destination.image %>
-</p>
+<div class="container-fluid">
+    <div class="col-xs-2 col-sm-3">
+      <p><strong>Try Again?</strong></p>
+      <%= bootstrap_form_tag do |f| %>
+        <%= link_to "Random", "#{@randest_id}", class: "btn btn-primary btn-lg btn-block"  %>
+      <% end %>
+    </div>   
+</div>
 
 <%= link_to 'Edit', edit_destination_path(@destination) %> |
-<%= link_to 'Back', destinations_path %>
+<%= link_to 'All Daycations', destinations_path %>
