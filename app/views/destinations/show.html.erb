@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<style>
+  body {
+    background: url(<%= @destination.image %>);
+    background-size: cover;
+    opacity: 0.8;
+  }
+</style>
+
 <p>
   <strong>Name:</strong>
   <%= @destination.name %>
