@@ -5,13 +5,11 @@
     background: url(<%= @destination.image %>);
     background-size: cover;
     opacity: 0.8;
+    color: white;
   }
 </style>
 
-<p>
-  <strong>Name:</strong>
-  <%= @destination.name %>
-</p>
+<h1><%= link_to @destination.name, @destination.dest_url, target: "_blank" %></h1>
 
 <p>
   <strong>Description:</strong>
@@ -23,8 +21,7 @@
   <%= @destination.travel_cost + @destination.dest_cost %>
 </p>
 
-<div class="container-fluid" id="map">
-</div>
+<div class="container-fluid" id="map"></div>
 
 <div class="container-fluid">
     <div class="col-xs-2 col-sm-3">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202201903) do
+ActiveRecord::Schema.define(version: 20151204221905) do
 
   create_table "destinations", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20151202201903) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "dest_type"
+    t.string   "dest_url"
   end
 
 end
