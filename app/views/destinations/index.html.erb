@@ -1,21 +1,38 @@
 <!-- <div id="dest"> -->
 <p id="notice"><%= notice %></p>
 
-<h1>Daycation Spots</h1>
+<h1>Search Daycations</h1>
 
+<!-- search field -->
+<%= search_form_for @search do |f| %>
+<div class ="field">
+ <%= f.label :name_cont, "Name Contains" %>
+ <%= f.text_field :name_cont %>
+</div>
+<div class="field">
+   <%= f.label :travel_cost_lteq %>
+   <%= f.text_field :travel_cost_lteq  %>
+ 
+</div>
+<div class="field">
+ <%= f.label :dest_cost_lteq %>
+ <%= f.text_field :dest_cost_lteq %>
+</div>
+
+
+<div class="actions">
+ <%= f.submit "Search", class: "btn btn-primary" %>
+</div>
+<% end %>
+
+<!-- destinations -->
 <div class="container">
   <div class="row">
-    <table>
-      <tbody>
         <% @destinations.each do |destination| %>
-          <tr>
-            <td><%= link_to destination.name, destination %></td>
-            <td><%= destination.image %></td>
-            <td><%= destination.dest_cost + destination.travel_cost %></td>
-          </tr>
+            <%= link_to destination.name, destination %>
+            <%= link_to image_tag("#{destination.name}.jpg"), destination %>
+            <%= destination.dest_cost + destination.travel_cost %>
         <% end %>
-      </tbody>
-    </table>
   </div>
 </div>
 
