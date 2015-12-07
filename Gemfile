@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'ransack'
 # convert address into lat and long
 gem 'geocoder'
 # add Bootstrap forms to our arsenal
