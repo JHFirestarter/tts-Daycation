@@ -3,41 +3,45 @@
 
 <h1>Search Daycations</h1>
 
-<!-- search field -->
+<!-- search form -->
 <%= search_form_for @search do |f| %>
-<div class ="field">
- <%= f.label :name_cont, "Name Contains" %>
- <%= f.text_field :name_cont %>
-</div>
-<div class="field">
-   <%= f.label :travel_cost_lteq %>
-   <%= f.text_field :travel_cost_lteq  %>
- 
-</div>
-<div class="field">
- <%= f.label :dest_cost_lteq %>
- <%= f.text_field :dest_cost_lteq %>
-</div>
-
-
-<div class="actions">
- <%= f.submit "Search", class: "btn btn-primary" %>
-</div>
+  <div class ="field">
+   <%= f.label :name_cont, "Name Contains" %>
+   <%= f.text_field :name_cont %>
+  </div>
+  <div class="field">
+     <%= f.label :travel_cost_lteq %>
+     <%= f.text_field :travel_cost_lteq  %>
+  </div>
+  <div class="field">
+   <%= f.label :dest_cost_lteq %>
+   <%= f.text_field :dest_cost_lteq %>
+  </div>
+  <div class="actions">
+   <%= f.submit "Search", class: "btn btn-primary" %>
+  </div>
 <% end %>
-
 <!-- destinations -->
-<div class="container">
-  <div class="row">
-        <% @destinations.each do |destination| %>
-            <%= link_to destination.name, destination %>
-            <%= link_to image_tag("#{destination.name}.jpg"), destination %>
-            <%= destination.dest_cost + destination.travel_cost %>
-        <% end %>
+
+<div class="card">
+  <img class="card-img-top" id="card-image">
+    <% @destinations.each do |destination| %>
+        <%= link_to image_tag("#{destination.name}.jpg"), destination %>
+    <% end %>
+  <div class="card-block">
+    <h4 class="card-title">
+      <% @destinations.each do |destination| %>
+          <%= destination.name %>
+      <% end %>
+    </h4>
+    <p class="card-text">
+      <% @destinations.each do |destination| %>
+      <%= destination.dest_cost + destination.travel_cost %>
+      <% end %>
+    </p>
   </div>
 </div>
 
 <br>
 
 <%= link_to 'New Daycation', new_destination_path %>
-
-<!-- </div> -->
