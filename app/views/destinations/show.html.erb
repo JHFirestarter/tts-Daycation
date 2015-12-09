@@ -1,13 +1,16 @@
 <p id="notice"><%= notice %></p>
-
 <style>
-  body {
-    background: url(<%= @destination.image %>);
-    background-size: cover;
-    opacity: 0.8;
-    color: white;
-  }
+
+body {
+  background-image: url("http://iliketowastemytime.com/system/files/sail-boat-sunset-lake-hd-wallpaper.jpg?download=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+
 </style>
+
 
 <h1><%= link_to @destination.name, @destination.dest_url, target: "_blank", hint: "Learn more" %></h1>
 
@@ -25,19 +28,24 @@
 
 <div class="container-fluid">
     <div class="col-xs-2 col-sm-3">
+      <!-- <img src="https://s-media-cache-ak0.pinimg.com/736x/d9/00/00/d9000001d731857f0156058d0002a007.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"> -->
+      <br>
+      <br>
       <p><strong>Try Again?</strong></p>
       <%= bootstrap_form_tag do |f| %>
-        <%= link_to "Random", "#{@randest_id}", class: "btn btn-primary btn-lg btn-block"  %>
+        <%= link_to "Random", "#{@randest_id}", class: "btn btn-warning btn-lg btn-block"  %>
       <% end %>
     </div>   
 </div>
 
 <%= link_to 'Edit', edit_destination_path(@destination) %> |
 <%= link_to 'All Daycations', destinations_path %>
-
+<div id="map">
 <%= javascript_tag do %>
   latitude = '<%= j @destination.latitude.to_s %>';
   longitude = '<%= j @destination.longitude.to_s %>';
   address = '<%= j @destination.address %>';
   description = '<%= j @destination.description %>';
 <% end %>
+
+</div>

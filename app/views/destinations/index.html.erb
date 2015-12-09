@@ -5,15 +5,17 @@
 
 <!-- search field -->
 <%= search_form_for @search do |f| %>
+
 <div class ="field">
  <%= f.label :name_cont, "Name Contains" %>
  <%= f.text_field :name_cont %>
 </div>
+<br>
 <div class="field">
    <%= f.label :travel_cost_lteq %>
    <%= f.text_field :travel_cost_lteq  %>
- 
-</div>
+ </div>
+ <br>
 <div class="field">
  <%= f.label :dest_cost_lteq %>
  <%= f.text_field :dest_cost_lteq %>
