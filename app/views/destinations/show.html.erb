@@ -22,7 +22,14 @@ body {
   </p>
 </div>
 
-<div class="container-fluid" id="map"></div>
+<div class="container-fluid" div id="map">
+  <%= javascript_tag do %>
+    latitude = '<%= j @destination.latitude.to_s %>';
+    longitude = '<%= j @destination.longitude.to_s %>';
+    address = '<%= j @destination.address %>';
+    description = '<%= j @destination.description %>';
+  <% end %>
+</div>
 
 <div class="container">
     <div class="col-xs-12 col-sm-3">
@@ -38,12 +45,3 @@ body {
 
 <%= link_to 'Edit', edit_destination_path(@destination) %> |
 <%= link_to 'All Daycations', destinations_path %>
-<div id="map">
-<%= javascript_tag do %>
-  latitude = '<%= j @destination.latitude.to_s %>';
-  longitude = '<%= j @destination.longitude.to_s %>';
-  address = '<%= j @destination.address %>';
-  description = '<%= j @destination.description %>';
-<% end %>
-
-</div>

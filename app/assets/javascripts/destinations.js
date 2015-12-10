@@ -2,7 +2,7 @@ $(document).ready(function() {
 	function initialize() {
 	  var myLocation = new google.maps.LatLng(35.23945, -80.8456);
 
-	  var destDaycation = new google.maps.LatLng(35.5, -81); // add destination
+	  var destDaycation = new google.maps.LatLng(latitude,longitude); // add destination
 
 	  var mapOptions = {
 	  	center: destDaycation,
