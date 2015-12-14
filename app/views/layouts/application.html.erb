@@ -15,7 +15,7 @@
 
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
-  <%= stylesheet_link_tag 'welcome' if controller_name == 'welcome' %>
+  <%= stylesheet_link_tag 'welcomes' if controller_name == 'welcomes' %>
   
   <%= csrf_meta_tags %>
 
@@ -40,7 +40,7 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav" id="navlinks">
-              <li class="active"><%= link_to "Destinations", destinations_path %></li>
+              <li class="active"><%= link_to "Daycations", destinations_path %></li>
               <li><a href="/about">About</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  resources :welcomes
+  get 'welcomes/index'
   
-  get '/about' => 'welcome#about'
-  get '/contact' => 'welcome#contact'
+  get '/about' => 'welcomes#about'
+  get '/contact' => 'welcomes#contact'
 
   resources :destinations
   # The priority is based upon order of creation: first created -> highest priority.
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   
-  root 'welcome#index'
+  root 'welcomes#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

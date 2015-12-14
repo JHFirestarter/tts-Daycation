@@ -12,6 +12,7 @@ class DestinationsController < ApplicationController
   # GET /destinations/1
   # GET /destinations/1.json
   def show
+    @welcomes = Welcome.all
     @destinations = Destination.all
   end
 

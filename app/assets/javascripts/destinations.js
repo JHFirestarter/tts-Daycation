@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	function initialize() {
-	  var myLocation = new google.maps.LatLng(35.23945, -80.8456);
+	  var myLocation = new google.maps.LatLng(latitude1,longitude1);
 
 	  var destDaycation = new google.maps.LatLng(latitude,longitude); // add destination
 

@@ -1,3 +1,11 @@
+class WelcomeController < ApplicationController
+  def index
+  	@all_id = Destination.pluck(:id)
+  	@randest_id = @all_id.sample
+  end
+end
+
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 <!-- Indicators -->
 	<ol class="carousel-indicators">
@@ -10,8 +18,8 @@
 				<div class="carousel-caption">
 					<h2>Where do you want to go today?</h2>
 					<%= bootstrap_form_tag do |f| %>
-			  			<%= f.text_field "Starting Address", hide_label: true, placeholder: "starting address (e.g. Charlotte, NC)" %>
-			  			<%= link_to "Random", "/destinations/#{@randest_id}", class: "btn btn-primary btn-lg"  %>
+			  			<%= f.text_field :address, hide_label: true, placeholder: "starting address (e.g. Charlotte, NC)" %>
+			  			<%= f.submit link_to "Random", "/destinations/#{@randest_id}", class: "btn btn-primary btn-lg"  %>
 					<% end %>
 				</div>
 			</div>
